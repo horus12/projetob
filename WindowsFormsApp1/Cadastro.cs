@@ -64,7 +64,9 @@ namespace WindowsFormsApp1
         {
             Mongo mongo = new Mongo();
             mongo.getserver();
-
+            CadastrarUsuario cadastrarUsuario = new CadastrarUsuario(mongo.getserver());
+            User user = new User(textBox2.Text, textBox3.Text, textBox4.Text);
+            cadastrarUsuario.cadastro(user);
            
                 
 
