@@ -24,5 +24,10 @@ namespace WindowsFormsApp1
             label3.Text = result.ToString();
             label3.Visible = true;
         }
+
+        private void CalculadoraImc_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

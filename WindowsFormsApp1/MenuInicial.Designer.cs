@@ -36,8 +36,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "MenuInicial";
-            this.Load += new System.EventHandler(this.MenuInicial_Load_1);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

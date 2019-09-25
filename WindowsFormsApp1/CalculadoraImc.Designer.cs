@@ -100,6 +100,13 @@
             this.Controls.Add(this.button1);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "CalculadoraImc";
+            this.Load += new System.EventHandler(this.CalculadoraImc_Load);
+            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.textBox1, 0);
+            this.Controls.SetChildIndex(this.textBox2, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
