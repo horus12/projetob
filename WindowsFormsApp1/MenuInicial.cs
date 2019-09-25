@@ -13,11 +13,11 @@ namespace WindowsFormsApp1
 {
     public partial class MenuInicial : WindowsFormsApp1.BaseForm
     {
-        public MenuInicial(String type)
+        public MenuInicial(User user)
         {
             
 
-            InitializeComponent(type);
+            InitializeComponent();
         }
 
         private void MenuInicial_Load(object sender, EventArgs e)
@@ -43,6 +43,11 @@ namespace WindowsFormsApp1
         }
 
         private void MenuInicial_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuInicial_Load_2(object sender, EventArgs e)
         {
 
         }

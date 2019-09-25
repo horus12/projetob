@@ -67,6 +67,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(142, 93);
+            this.textBox1.MaxLength = 3;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 3;
@@ -74,6 +75,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(142, 130);
+            this.textBox2.MaxLength = 3;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 4;
@@ -87,6 +89,7 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "label3";
             this.label3.Visible = false;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // CalculadoraImc
             // 

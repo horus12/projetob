@@ -68,20 +68,20 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             LoginUsecase loginUsecase = new LoginUsecase();
-            var status =  loginUsecase.Login(maskedTextBox1.Text,tbPassword.Text);
-            if(status.Equals("wrong_password"))
-                MessageBox.Show("senha errada");
-            else if (status.Equals("not_found"))
+
+          
+            try
             {
-                MessageBox.Show("senha errada");
-            }
-            else { 
+                User user = loginUsecase.Login(maskedTextBox1.Text, tbPassword.Text);
                 MessageBox.Show("Logando ...");
-                MenuInicial menuInicial = new MenuInicial(status);
+                MenuInicial menuInicial = new MenuInicial(user);
                 menuInicial.Show();
                 this.Hide();
+            } catch(Exception ex)
+            {
+                Console.WriteLine(ex);
             }
-                
+
 
 
         }

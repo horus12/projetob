@@ -26,7 +26,7 @@
         /// Método necessário para suporte ao Designer - não modifique 
         /// o conteúdo deste método com o editor de código.
         /// </summary>
-        private void InitializeComponent(string type)
+        private void InitializeComponent()
         {
             this.SuspendLayout();
             // 
@@ -36,6 +36,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "MenuInicial";
+            this.Load += new System.EventHandler(this.MenuInicial_Load_2);
             this.ResumeLayout(false);
             this.PerformLayout();
 

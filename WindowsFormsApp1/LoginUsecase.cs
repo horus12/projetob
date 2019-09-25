@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
 
         }
 
-        public string Login(string cpf , string senha)
+        public User Login(string cpf , string senha)
         {
             Mongo mongo = new Mongo();
             var database = mongo.getserver();
@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
             var filter = new BsonDocument("Cpf", cpf);
             var results = collection.Find(filter).ToList();
             if (results.Count == 0)
-                return "user_not_found";
+                throw new Exception();
 
             User user = results.First();
 
@@ -32,10 +32,10 @@ namespace WindowsFormsApp1
 
 
             if (!user.Password.Equals(cript.ComputeSha256Hash(senha)))
-                return "wrong_password";
+                throw new Exception();
 
 
-            return user.Profile.ToString();
+            return user;
         }
 
 
