@@ -26,5 +26,11 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void calculoDoImcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CalculadoraImc calculadoraImc = new CalculadoraImc();
+            calculadoraImc.ShowDialog();
+        }
     }
 }

@@ -80,6 +80,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CadastrarUsuario.cs" />
+    <Compile Include="Calculadora.cs" />
+    <Compile Include="CalculadoraImc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculadoraImc.Designer.cs">
+      <DependentUpon>CalculadoraImc.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserStatus.cs" />
     <Compile Include="ControleDeUsuario.cs">
       <SubType>Form</SubType>
@@ -119,6 +126,9 @@
     <Compile Include="User.cs" />
     <EmbeddedResource Include="Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalculadoraImc.resx">
+      <DependentUpon>CalculadoraImc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControleDeUsuario.resx">
       <DependentUpon>ControleDeUsuario.cs</DependentUpon>

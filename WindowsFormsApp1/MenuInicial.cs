@@ -36,5 +36,15 @@ namespace WindowsFormsApp1
             controleDeUsuario.ShowDialog();
             
         }
+
+        private void calculadoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuInicial_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
