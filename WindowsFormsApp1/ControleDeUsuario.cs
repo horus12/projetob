@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,8 @@ namespace WindowsFormsApp1
 {
     public partial class ControleDeUsuario : WindowsFormsApp1.BaseForm
     {
+        List<User> list;
+        
         public ControleDeUsuario()
         {
             InitializeComponent();
@@ -18,7 +21,7 @@ namespace WindowsFormsApp1
             var database = mongo.getserver();
             var collection = database.GetCollection<User>("user");
 
-            var list = collection.Find(_ => true).ToList();
+            list = collection.Find(_ => true).ToList();
             foreach (User user in list)
             {
                 string[] userString = new string[] { user.Name, user.UserStatus.ToString(), user.Profile.ToString() };
@@ -45,6 +48,31 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Mongo mongo = new Mongo();
+            var database = mongo.getserver();
+            var collection = database.GetCollection<User>("user");
+
+            int i = 0;
+            foreach (User user in list)
+            {
+                if (dataGridView1.Rows[i].Cells[1].Value.ToString().Equals("NORMAL"))
+                    user.UserStatus = UserStatus.NORMAL;
+                if (dataGridView1.Rows[i].Cells[1].Value.ToString().Equals("DELETED"))
+                    user.UserStatus = UserStatus.DELETED;
+                if (dataGridView1.Rows[i].Cells[1].Value.ToString().Equals("BLOQUED"))
+                    user.UserStatus = UserStatus.BLOQUED;
+
+                if (dataGridView1.Rows[i].Cells[2].Value.ToString().Equals("1"))
+                    user.Profile = 1;
+                if (dataGridView1.Rows[i].Cells[2].Value.ToString().Equals("2"))
+                    user.Profile = 2;
+
+                var filter = Builders<User>.Filter.Eq(s => s.Id, user.Id);
+                var result = collection.ReplaceOne(filter, user);
+
+                
+            }
+
 
         }
 
