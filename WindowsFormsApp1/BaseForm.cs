@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
 
         private void menuInicial_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+           
         }
 
         private void MenuInicial_Load(object sender, EventArgs e)

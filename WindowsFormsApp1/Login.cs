@@ -77,7 +77,7 @@ namespace WindowsFormsApp1
             }
             else { 
                 MessageBox.Show("Logando ...");
-                MenuInicial menuInicial = new MenuInicial(status);
+                MenuInicial menuInicial = new MenuInicial();
                 menuInicial.Show();
                 this.Hide();
             }
