@@ -14,6 +14,9 @@ namespace WindowsFormsApp1
     {
         public Login()
         {
+            
+            
+
             InitializeComponent();
         }
 
@@ -54,6 +57,46 @@ namespace WindowsFormsApp1
 
             Cadastro cadastro = new Cadastro(this);
             cadastro.ShowDialog();
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoginUsecase loginUsecase = new LoginUsecase();
+            var status =  loginUsecase.Login(maskedTextBox1.Text,tbPassword.Text);
+            if(status.Equals("wrong_password"))
+                MessageBox.Show("senha errada");
+            else if (status.Equals("not_found"))
+            {
+                MessageBox.Show("senha errada");
+            }
+            else { 
+                MessageBox.Show("Logando ...");
+                MenuInicial menuInicial = new MenuInicial(status);
+                menuInicial.Show();
+                this.Hide();
+            }
+                
+
+
+        }
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void maskedTextBox1_MaskInputRejected_1(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
 
         }
     }

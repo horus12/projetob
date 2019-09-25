@@ -17,18 +17,33 @@ namespace WindowsFormsApp1
             this.database = database;
         }
 
-        public void cadastro(User user) {
-            var collection = database.GetCollection<BsonDocument>("user");
+        public String cadastro(User user) {
+            var collection = database.GetCollection<User>("user");
             if (user.Cpf == null || user.Cpf.Equals(""))
-               return;
+               return "invalid_cpf";
+            if (user.Password == null || user.Password.Equals(""))
+                return "invalid_password";
+            if (user.Rg == null || user.Rg.Equals(""))
+                return "invalid_rg";
+            if (user.Name == null || user.Name.Equals(""))
+                return "invalid_name";
+            var filter = new BsonDocument("Cpf", user.Cpf);
+            var results = collection.Find(filter).ToList();
+            if (results.Count > 0)
+                return "user_existent";
 
-            var userDb = new BsonDocument();
-            userDb.Add("Name", user.Name);
-            userDb.Add("Password", user.Password);
-            userDb.Add("Cpf", user.Cpf);
-            collection.InsertOne(userDb);
-            collection.Find();
-            return;
+            Cript cript = new Cript();
+
+
+            user.Password = cript.ComputeSha256Hash(user.Password);
+            user.StartDate = DateTime.Now.Date;
+            user.UserStatus = UserStatus.NORMAL;
+            user.Profile = 2;
+           
+            collection.InsertOne(user);
+            
+
+            return "success";
         }
     }
 }

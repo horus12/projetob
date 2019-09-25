@@ -12,19 +12,20 @@ namespace WindowsFormsApp1
     {
 
         [BsonConstructor]
-        public User(string name, string password, string cpf) {
+        public User(string name, string password, string cpf, string rg) {
             Name = name;
             Password = password;
             Cpf = cpf;
+            Rg = rg;
         }
-
+        [BsonId]
         public ObjectId Id { get; set; }
         public string Name { get; set; }
         public string Password { get; set; }
         public string Cpf { get; set; }
         public string Rg { get; set; }
         public BsonDateTime StartDate { get; set; }
-        public int UserStatus { get; set; }
+        public UserStatus UserStatus { get; set; }
         public int Profile { get; set; }
 
     }

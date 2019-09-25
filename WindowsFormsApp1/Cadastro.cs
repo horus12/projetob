@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -63,18 +64,66 @@ namespace WindowsFormsApp1
         private void Button1_Click_1(object sender, EventArgs e)
         {
             Mongo mongo = new Mongo();
-            mongo.getserver();
             CadastrarUsuario cadastrarUsuario = new CadastrarUsuario(mongo.getserver());
-            User user = new User(textBox2.Text, textBox3.Text, textBox4.Text);
-            cadastrarUsuario.cadastro(user);
+            User user = new User(tbNome.Text,tbSenha.Text,tbmCpf.Text,tbRg.Text);
+            var status = cadastrarUsuario.cadastro(user);
+
+            if (status.Equals("user_existent"))
+            {
+                string text = "Usuario ja cadastrado";
+                MessageBox.Show(text);
+                clearFields();
+            }
+            else if (status.Equals("success"))
+            {
+                MessageBox.Show("Usuario cadastrado com exito");
+                frm.Show();
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("Algum campo esta em branco");
+            }
            
                 
 
+        }
+        private void clearFields()
+        {
+            tbmCpf.Text = "";
+            tbNome.Text = "";
+            tbRg.Text = "";
+            tbSenha.Text = "";
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
            
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbSenha_Lostfocus(object sender, EventArgs e)
+        {
+            Regex AlphaRegex = new Regex("([a-zA-Z0-9])$");
+
+            if (!AlphaRegex.IsMatch(this.tbSenha.Text))
+            {
+                lbInvalidPassword.Visible = true;
+            }
+            else
+            {
+                lbInvalidPassword.Visible = false;
+            }
+
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

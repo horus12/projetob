@@ -30,10 +30,11 @@
         {
             this.lbIntro = new System.Windows.Forms.Label();
             this.gbLogin = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.btLogin = new System.Windows.Forms.Button();
             this.lbRegister = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.lbPassword = new System.Windows.Forms.Label();
-            this.tbUser = new System.Windows.Forms.TextBox();
             this.lbTextUser = new System.Windows.Forms.Label();
             this.gbLogin.SuspendLayout();
             this.SuspendLayout();
@@ -51,10 +52,11 @@
             // 
             // gbLogin
             // 
+            this.gbLogin.Controls.Add(this.maskedTextBox1);
+            this.gbLogin.Controls.Add(this.btLogin);
             this.gbLogin.Controls.Add(this.lbRegister);
             this.gbLogin.Controls.Add(this.tbPassword);
             this.gbLogin.Controls.Add(this.lbPassword);
-            this.gbLogin.Controls.Add(this.tbUser);
             this.gbLogin.Controls.Add(this.lbTextUser);
             this.gbLogin.Location = new System.Drawing.Point(18, 118);
             this.gbLogin.Name = "gbLogin";
@@ -63,6 +65,27 @@
             this.gbLogin.TabStop = false;
             this.gbLogin.Text = "Login de usuario";
             this.gbLogin.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.maskedTextBox1.Location = new System.Drawing.Point(23, 47);
+            this.maskedTextBox1.Mask = "000,000,000-00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox1.TabIndex = 0;
+            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected_1);
+            // 
+            // btLogin
+            // 
+            this.btLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btLogin.Location = new System.Drawing.Point(224, 196);
+            this.btLogin.Name = "btLogin";
+            this.btLogin.Size = new System.Drawing.Size(75, 23);
+            this.btLogin.TabIndex = 5;
+            this.btLogin.Text = "Login";
+            this.btLogin.UseVisualStyleBackColor = true;
+            this.btLogin.Click += new System.EventHandler(this.button1_Click);
             // 
             // lbRegister
             // 
@@ -81,7 +104,7 @@
             this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPassword.Location = new System.Drawing.Point(23, 88);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(83, 13);
+            this.tbPassword.Size = new System.Drawing.Size(100, 13);
             this.tbPassword.TabIndex = 3;
             this.tbPassword.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -94,16 +117,6 @@
             this.lbPassword.TabIndex = 2;
             this.lbPassword.Text = "Digite sua senha";
             this.lbPassword.Click += new System.EventHandler(this.label1_Click_1);
-            // 
-            // tbUser
-            // 
-            this.tbUser.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.tbUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbUser.Location = new System.Drawing.Point(23, 47);
-            this.tbUser.Name = "tbUser";
-            this.tbUser.Size = new System.Drawing.Size(83, 13);
-            this.tbUser.TabIndex = 1;
-            this.tbUser.TextChanged += new System.EventHandler(this.tbUser_TextChanged);
             // 
             // lbTextUser
             // 
@@ -124,11 +137,13 @@
             this.Controls.Add(this.lbIntro);
             this.Name = "Login";
             this.Text = "Calculadora de calorias";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
+            this.Load += new System.EventHandler(this.Login_Load);
             this.gbLogin.ResumeLayout(false);
             this.gbLogin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 
         }
 
@@ -136,11 +151,12 @@
 
         private System.Windows.Forms.Label lbIntro;
         private System.Windows.Forms.GroupBox gbLogin;
-        private System.Windows.Forms.TextBox tbUser;
         private System.Windows.Forms.Label lbTextUser;
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label lbRegister;
+        private System.Windows.Forms.Button btLogin;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
 
