@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    enum UserStatus
+    public enum UserStatus
     {
         NORMAL,
         BLOQUED,

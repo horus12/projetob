@@ -8,7 +8,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace WindowsFormsApp1
 {
-    class User
+    public class User
     {
 
         [BsonConstructor]

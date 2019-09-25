@@ -47,5 +47,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void ControleDeUsuario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

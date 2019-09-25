@@ -13,41 +13,32 @@ namespace WindowsFormsApp1
 {
     public partial class MenuInicial : WindowsFormsApp1.BaseForm
     {
+        User user_;
         public MenuInicial(User user)
         {
-            
-
             InitializeComponent();
+            user_ = user;
+        }
+        private void MenuInicial_FormClosed_1(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void controleDeUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ControleDeUsuario controleDeUsuario = new ControleDeUsuario();
+            controleDeUsuario.ShowDialog();
         }
 
         private void MenuInicial_Load(object sender, EventArgs e)
         {
-
+            if (user_.Profile == 2)
+            {
+                administraçãoToolStripMenuItem.Visible = false;
+            }
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void controleDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ControleDeUsuario controleDeUsuario = new ControleDeUsuario();
-            controleDeUsuario.ShowDialog();
-            
-        }
-
-        private void calculadoraToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MenuInicial_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MenuInicial_Load_2(object sender, EventArgs e)
         {
 
         }

@@ -79,7 +79,7 @@ namespace WindowsFormsApp1
                 this.Hide();
             } catch(Exception ex)
             {
-                Console.WriteLine(ex);
+                MessageBox.Show("Erro ao autenticar");
             }
 
 
