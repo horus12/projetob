@@ -661,3 +661,4 @@ C:\Users\15273758\Downloads\projetob\WindowsFormsApp1\obj\Debug\WindowsFormsApp1
 C:\Users\15273758\Downloads\projetob\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
 C:\Users\15273758\Downloads\projetob\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\15273758\Downloads\projetob\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\15273758\Downloads\projetob\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AlterarSenha.resources

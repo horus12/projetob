@@ -93,6 +93,7 @@
             this.tbSenha.Name = "tbSenha";
             this.tbSenha.Size = new System.Drawing.Size(109, 20);
             this.tbSenha.TabIndex = 2;
+            this.tbSenha.TextChanged += new System.EventHandler(this.tbSenha_TextChanged);
             this.tbSenha.LostFocus += new System.EventHandler(this.tbSenha_Lostfocus);
             // 
             // tbRg

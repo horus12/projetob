@@ -33,6 +33,8 @@
             this.administraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controleDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alterarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +43,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem,
             this.administraçãoToolStripMenuItem,
-            this.calculadoraToolStripMenuItem});
+            this.calculadoraToolStripMenuItem,
+            this.perfilToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -76,6 +79,21 @@
             this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.calculadoraToolStripMenuItem.Text = "Calculadora";
             // 
+            // perfilToolStripMenuItem
+            // 
+            this.perfilToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.alterarSenhaToolStripMenuItem});
+            this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.perfilToolStripMenuItem.Text = "Perfil";
+            // 
+            // alterarSenhaToolStripMenuItem
+            // 
+            this.alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
+            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alterarSenhaToolStripMenuItem.Text = "Alterar senha";
+            this.alterarSenhaToolStripMenuItem.Click += new System.EventHandler(this.alterarSenhaToolStripMenuItem_Click);
+            // 
             // MenuInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,5 +120,7 @@
         private System.Windows.Forms.ToolStripMenuItem administraçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem controleDeUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calculadoraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alterarSenhaToolStripMenuItem;
     }
 }

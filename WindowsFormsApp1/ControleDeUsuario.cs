@@ -70,7 +70,7 @@ namespace WindowsFormsApp1
                 var filter = Builders<User>.Filter.Eq(s => s.Id, user.Id);
                 var result = collection.ReplaceOne(filter, user);
 
-                
+                i++;
             }
 
 

@@ -42,5 +42,11 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void alterarSenhaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AlterarSenha alterarSenha = new AlterarSenha(user_);
+            alterarSenha.ShowDialog();
+        }
     }
 }

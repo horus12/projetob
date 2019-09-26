@@ -126,5 +126,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void tbSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
