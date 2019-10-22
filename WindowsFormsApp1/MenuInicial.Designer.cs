@@ -35,6 +35,7 @@
             this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cALULADORADEPESOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +76,8 @@
             // 
             // calculadoraToolStripMenuItem
             // 
+            this.calculadoraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cALULADORADEPESOToolStripMenuItem});
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
             this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.calculadoraToolStripMenuItem.Text = "Calculadora";
@@ -90,9 +93,16 @@
             // alterarSenhaToolStripMenuItem
             // 
             this.alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
-            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.alterarSenhaToolStripMenuItem.Text = "Alterar senha";
             this.alterarSenhaToolStripMenuItem.Click += new System.EventHandler(this.alterarSenhaToolStripMenuItem_Click);
+            // 
+            // cALULADORADEPESOToolStripMenuItem
+            // 
+            this.cALULADORADEPESOToolStripMenuItem.Name = "cALULADORADEPESOToolStripMenuItem";
+            this.cALULADORADEPESOToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.cALULADORADEPESOToolStripMenuItem.Text = "CALULADORA DE PESO";
+            this.cALULADORADEPESOToolStripMenuItem.Click += new System.EventHandler(this.cALULADORADEPESOToolStripMenuItem_Click);
             // 
             // MenuInicial
             // 
@@ -122,5 +132,6 @@
         private System.Windows.Forms.ToolStripMenuItem calculadoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alterarSenhaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cALULADORADEPESOToolStripMenuItem;
     }
 }

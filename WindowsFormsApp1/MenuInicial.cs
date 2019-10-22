@@ -48,5 +48,11 @@ namespace WindowsFormsApp1
             AlterarSenha alterarSenha = new AlterarSenha(user_);
             alterarSenha.ShowDialog();
         }
+
+        private void cALULADORADEPESOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CalculadoraImc calculadoraImc = new CalculadoraImc();
+            calculadoraImc.ShowDialog();
+        }
     }
 }

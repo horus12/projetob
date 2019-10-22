@@ -56,7 +56,7 @@
             this.tbSenha.Name = "tbSenha";
             this.tbSenha.Size = new System.Drawing.Size(100, 20);
             this.tbSenha.TabIndex = 1;
-            this.tbSenha.LostFocus += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbSenha.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tbSenha2
             // 
@@ -64,7 +64,7 @@
             this.tbSenha2.Name = "tbSenha2";
             this.tbSenha2.Size = new System.Drawing.Size(100, 20);
             this.tbSenha2.TabIndex = 2;
-            this.tbSenha2.LostFocus += new System.EventHandler(this.tbSenha2_TextChanged);
+            this.tbSenha2.TextChanged += new System.EventHandler(this.tbSenha2_TextChanged);
             // 
             // label1
             // 
@@ -115,6 +115,8 @@
             this.label3.Size = new System.Drawing.Size(115, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "INVALID PASSWORD";
+            this.label3.Visible = false;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -125,12 +127,15 @@
             this.label4.Size = new System.Drawing.Size(115, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "INVALID PASSWORD";
+            this.label4.Visible = false;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // AlterarSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);

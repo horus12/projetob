@@ -95,5 +95,15 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
