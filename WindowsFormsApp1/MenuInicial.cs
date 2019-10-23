@@ -1,17 +1,9 @@
-﻿using MongoDB.Bson;
-using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using System;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class MenuInicial : WindowsFormsApp1.BaseForm
+    public partial class MenuInicial : BaseForm
     {
         User user_;
         public MenuInicial(User user)
@@ -53,6 +45,12 @@ namespace WindowsFormsApp1
         {
             CalculadoraImc calculadoraImc = new CalculadoraImc();
             calculadoraImc.ShowDialog();
+        }
+
+        private void desbloqueioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var desbloqueio = new Desbloqueio();
+            desbloqueio.ShowDialog();
         }
     }
 }

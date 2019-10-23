@@ -31,21 +31,23 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxUnblockName = new System.Windows.Forms.TextBox();
+            this.txtBoxUnblock = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnUnblock = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtBoxEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBoxUnblockName
+            // txtBoxUnblock
             // 
-            this.textBoxUnblockName.Location = new System.Drawing.Point(39, 46);
-            this.textBoxUnblockName.Name = "textBoxUnblockName";
-            this.textBoxUnblockName.Size = new System.Drawing.Size(100, 23);
-            this.textBoxUnblockName.TabIndex = 0;
+            this.txtBoxUnblock.Location = new System.Drawing.Point(38, 46);
+            this.txtBoxUnblock.Name = "txtBoxUnblock";
+            this.txtBoxUnblock.Size = new System.Drawing.Size(187, 23);
+            this.txtBoxUnblock.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(39, 25);
+            this.label1.Location = new System.Drawing.Point(38, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 18);
             this.label1.TabIndex = 1;
@@ -54,22 +56,39 @@ namespace WindowsFormsApp1
             // 
             // btnUnblock
             // 
-            this.btnUnblock.Location = new System.Drawing.Point(39, 75);
+            this.btnUnblock.Location = new System.Drawing.Point(38, 119);
             this.btnUnblock.Name = "btnUnblock";
-            this.btnUnblock.Size = new System.Drawing.Size(100, 23);
+            this.btnUnblock.Size = new System.Drawing.Size(187, 23);
             this.btnUnblock.TabIndex = 2;
             this.btnUnblock.Text = "Desbloquear";
             this.btnUnblock.UseVisualStyleBackColor = true;
             this.btnUnblock.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(38, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 15);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Email";
+            // 
+            // txtBoxEmail
+            // 
+            this.txtBoxEmail.Location = new System.Drawing.Point(38, 90);
+            this.txtBoxEmail.Name = "txtBoxEmail";
+            this.txtBoxEmail.Size = new System.Drawing.Size(187, 23);
+            this.txtBoxEmail.TabIndex = 4;
+            // 
             // Desbloqueio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(179, 122);
+            this.ClientSize = new System.Drawing.Size(325, 213);
+            this.Controls.Add(this.txtBoxEmail);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnUnblock);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxUnblockName);
+            this.Controls.Add(this.txtBoxUnblock);
             this.Name = "Desbloqueio";
             this.Text = "Desbloqueio";
             this.ResumeLayout(false);
@@ -80,6 +99,8 @@ namespace WindowsFormsApp1
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnUnblock;
-        private System.Windows.Forms.TextBox textBoxUnblockName;
+        private System.Windows.Forms.TextBox txtBoxUnblock;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtBoxEmail;
     }
 }

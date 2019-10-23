@@ -99,12 +99,15 @@
     <Compile Include="Desbloqueio.Designer.cs">
       <DependentUpon>Desbloqueio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Email.cs" />
     <Compile Include="ExcluirUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExcluirUser.Designer.cs">
       <DependentUpon>ExcluirUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="usecases\DesbloqueioUseCase.cs" />
+    <Compile Include="usecases\LoginUsecase.cs" />
     <Compile Include="UserStatus.cs" />
     <Compile Include="ControleDeUsuario.cs">
       <SubType>Form</SubType>
@@ -112,7 +115,6 @@
     <Compile Include="ControleDeUsuario.Designer.cs">
       <DependentUpon>ControleDeUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginUsecase.cs" />
     <Compile Include="Cript.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
