@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
             var peso = double.Parse(textBox1.Text);
             var altura = double.Parse(textBox2.Text);
             double result = imc.calcula(peso, altura);
-            label3.Text = result.ToString();
+            label3.Text = result.ToString("00.00");
             label3.Visible = true;
         }
 

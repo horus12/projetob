@@ -93,6 +93,12 @@
     <Compile Include="CalculadoraImc.Designer.cs">
       <DependentUpon>CalculadoraImc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Desbloqueio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desbloqueio.Designer.cs">
+      <DependentUpon>Desbloqueio.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExcluirUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControleDeUsuario.resx">
       <DependentUpon>ControleDeUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desbloqueio.resx">
+      <DependentUpon>Desbloqueio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExcluirUser.resx">
       <DependentUpon>ExcluirUser.cs</DependentUpon>

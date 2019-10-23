@@ -10,7 +10,7 @@ namespace WindowsFormsApp1
 
         internal double calcula(double peso, double altura)
         {
-            return peso / (altura * altura);
+            return (peso / (altura * altura)) * 10000;
         }
     }
 }
