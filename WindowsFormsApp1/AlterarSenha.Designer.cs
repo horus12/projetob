@@ -105,6 +105,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Voltar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -134,8 +135,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
@@ -147,6 +146,9 @@
             this.Controls.Add(this.lbAlterarsenha);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "AlterarSenha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            this.Load += new System.EventHandler(this.AlterarSenha_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -106,8 +106,10 @@
     <Compile Include="ExcluirUser.Designer.cs">
       <DependentUpon>ExcluirUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="usecases\ExcluirUserUseCase.cs" />
     <Compile Include="usecases\DesbloqueioUseCase.cs" />
     <Compile Include="usecases\LoginUsecase.cs" />
+    <Compile Include="usecases\StatusEnum.cs" />
     <Compile Include="UserStatus.cs" />
     <Compile Include="ControleDeUsuario.cs">
       <SubType>Form</SubType>
@@ -194,8 +196,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="usecases\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

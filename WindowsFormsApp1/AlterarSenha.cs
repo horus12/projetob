@@ -105,5 +105,15 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AlterarSenha_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

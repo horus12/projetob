@@ -52,5 +52,11 @@ namespace WindowsFormsApp1
             var desbloqueio = new Desbloqueio();
             desbloqueio.ShowDialog();
         }
+
+        private void excluirContaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var excluir = new ExclusaoUser();
+            excluir.ShowDialog();
+        }
     }
 }

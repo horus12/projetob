@@ -31,27 +31,30 @@
             this.tbSenha = new System.Windows.Forms.TextBox();
             this.tbCpf = new System.Windows.Forms.MaskedTextBox();
             this.gbLogin = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbLogin.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbSenha
             // 
             this.tbSenha.Location = new System.Drawing.Point(16, 131);
-            this.tbSenha.Name = "textBox1";
+            this.tbSenha.Name = "tbSenha";
+            this.tbSenha.PasswordChar = '*';
             this.tbSenha.Size = new System.Drawing.Size(100, 20);
             this.tbSenha.TabIndex = 0;
             // 
-            // maskedTextBox1
+            // tbCpf
             // 
             this.tbCpf.Location = new System.Drawing.Point(16, 72);
-            this.tbCpf.Name = "maskedTextBox1";
+            this.tbCpf.Mask = "000,000,000-00";
+            this.tbCpf.Name = "tbCpf";
             this.tbCpf.Size = new System.Drawing.Size(100, 20);
             this.tbCpf.TabIndex = 1;
+            this.tbCpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.tbCpf_MaskInputRejected);
             // 
-            // groupBox1
+            // gbLogin
             // 
             this.gbLogin.Controls.Add(this.button1);
             this.gbLogin.Controls.Add(this.label2);
@@ -59,30 +62,12 @@
             this.gbLogin.Controls.Add(this.tbSenha);
             this.gbLogin.Controls.Add(this.tbCpf);
             this.gbLogin.Location = new System.Drawing.Point(23, 30);
-            this.gbLogin.Name = "groupBox1";
+            this.gbLogin.Name = "gbLogin";
             this.gbLogin.Size = new System.Drawing.Size(196, 257);
             this.gbLogin.TabIndex = 2;
             this.gbLogin.TabStop = false;
             this.gbLogin.Text = "Faça o login novamente para continuar a exclusão";
             this.gbLogin.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Usuario";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 115);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Senha";
             // 
             // button1
             // 
@@ -94,14 +79,35 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Senha";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Usuario";
+            // 
+            // ExclusaoUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             this.Controls.Add(this.gbLogin);
-            this.Name = "Form1";
+            this.Name = "ExclusaoUser";
             this.Text = "Exclusão de usuario";
+            this.Load += new System.EventHandler(this.ExclusaoUser_Load);
             this.gbLogin.ResumeLayout(false);
             this.gbLogin.PerformLayout();
             this.ResumeLayout(false);
