@@ -24,15 +24,20 @@ namespace WindowsFormsApp1
             var filter = new BsonDocument("Cpf", cpf);
             var results = collection.Find(filter).ToList();
             if (results.Count == 0)
-                throw new Exception();
+                throw new Exception("Usuario inesistente ");
 
             User user = results.First();
 
             Cript cript = new Cript();
 
+            if (user.UserStatus==UserStatus.DELETED)
+                throw new Exception("Usuario inesistente ");
+
+            if (user.UserStatus==UserStatus.BLOQUED)
+                throw new Exception("Usuario Bloqueado");
 
             if (!user.Password.Equals(cript.ComputeSha256Hash(senha)))
-                throw new Exception();
+                throw new Exception("Senha Invalida");
 
 
             return user;

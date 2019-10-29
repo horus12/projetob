@@ -2,7 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\DOCS",
-    "\\WindowsFormsApp1"
+    "\\WindowsFormsApp1",
+    "\\WindowsFormsApp1\\Usecases"
   ],
+  "SelectedNode": "\\WindowsFormsApp1\\Usecases\\LoginUsecase.cs",
   "PreviewInSolutionExplorer": false
 }

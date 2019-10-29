@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
 
              IMongoDatabase db = client.GetDatabase("projetob");
              var collection = db.GetCollection<BsonDocument>("user");
-
+             var collectionHistory = db.GetCollection<BsonDocument>("userHistory");
 
             return db;
         }
