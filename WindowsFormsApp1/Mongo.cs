@@ -22,8 +22,7 @@ namespace WindowsFormsApp1
             var client = new MongoClient();
 
              IMongoDatabase db = client.GetDatabase("projetob");
-             var collection = db.GetCollection<BsonDocument>("user");
-             var collectionHistory = db.GetCollection<BsonDocument>("userHistory");
+             
 
             return db;
         }

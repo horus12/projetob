@@ -38,7 +38,7 @@ namespace WindowsFormsApp1
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao autenticar");
+                MessageBox.Show("Erro ao autenticar"+ ex.Message);
             }
 
 

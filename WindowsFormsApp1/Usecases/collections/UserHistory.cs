@@ -13,16 +13,9 @@ namespace WindowsFormsApp1.usecases.collections
     {
 
         [BsonConstructor]
-        public UserHistory(User user)
+        public UserHistory()
         {
-            Name = user.Name;
-            Password = user.Password;
-            Cpf = user.Cpf;
-            Rg = user.Rg;
-            CreatedDate = user.StartDate;
-            UserStatus = user.UserStatus;
-            Profile = user.Profile;
-            DeletedDate = DateTime.Now;
+           
         }
         [BsonId]
         public ObjectId Id { get; set; }

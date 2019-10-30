@@ -85,6 +85,19 @@
     <Compile Include="AlterarSenha.Designer.cs">
       <DependentUpon>AlterarSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastroDeProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroDeProduto.Designer.cs">
+      <DependentUpon>CadastroDeProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="calculadoraCaloriasDiarias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="calculadoraCaloriasDiarias.Designer.cs">
+      <DependentUpon>calculadoraCaloriasDiarias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usecases\CadastrarProduto.cs" />
     <Compile Include="usecases\CadastrarUsuario.cs" />
     <Compile Include="Calculadora.cs" />
     <Compile Include="CalculadoraImc.cs">
@@ -106,6 +119,8 @@
     <Compile Include="ExcluirUser.Designer.cs">
       <DependentUpon>ExcluirUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="usecases\collections\Product.cs" />
+    <Compile Include="usecases\collections\User.cs" />
     <Compile Include="usecases\collections\UserHistory.cs" />
     <Compile Include="usecases\ExcluirUserUseCase.cs" />
     <Compile Include="usecases\DesbloqueioUseCase.cs" />
@@ -146,12 +161,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Mongo.cs" />
-    <Compile Include="User.cs" />
     <EmbeddedResource Include="AlterarSenha.resx">
       <DependentUpon>AlterarSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroDeProduto.resx">
+      <DependentUpon>CadastroDeProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CalculadoraImc.resx">
       <DependentUpon>CalculadoraImc.cs</DependentUpon>
@@ -197,6 +214,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="usecases\objects" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -58,5 +58,16 @@ namespace WindowsFormsApp1
             var excluir = new ExclusaoUser();
             excluir.ShowDialog();
         }
+
+        private void calcularCaloriasConsumidasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cadastroDeAlimentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var cadastrarProduto = new CadastroDeProduto();
+            cadastrarProduto.ShowDialog();
+        }
     }
 }

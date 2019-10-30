@@ -35,8 +35,16 @@ namespace WindowsFormsApp1.usecases
 
             collection.ReplaceOne(filter,user);
 
-            UserHistory userHistory = new UserHistory(user);
-
+            UserHistory userHistory = new UserHistory();
+            userHistory.Name = user.Name;
+            userHistory.Password = user.Password;
+            userHistory.Cpf = user.Cpf;
+            userHistory.Rg = user.Rg;
+            userHistory.CreatedDate = user.StartDate;
+            userHistory.UserStatus = user.UserStatus;
+            userHistory.Profile = user.Profile;
+            userHistory.DeletedDate = DateTime.Now;
+            
             collectionHistory.InsertOne(userHistory);
            
 
