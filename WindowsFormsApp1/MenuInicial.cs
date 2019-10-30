@@ -27,6 +27,9 @@ namespace WindowsFormsApp1
             if (user_.Profile == 2)
             {
                 administraçãoToolStripMenuItem.Visible = false;
+                cadastroDeAlimentosToolStripMenuItem.Visible = false;
+                exclusaoDeAlimentoToolStripMenuItem.Visible = false;
+                alteracaoDeAlimentoToolStripMenuItem.Visible = false;
             }
         }
 
@@ -66,6 +69,7 @@ namespace WindowsFormsApp1
 
         private void cadastroDeAlimentosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             var cadastrarProduto = new CadastroDeProduto();
             cadastrarProduto.ShowDialog();
         }
