@@ -1193,3 +1193,4 @@ C:\workspace\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
 C:\workspace\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\workspace\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\workspace\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CadastroDeProduto.resources
+C:\Users\15610967\RiderProjects\projetob\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CadastroDeProduto.resources

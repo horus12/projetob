@@ -1,10 +1,7 @@
-﻿using MongoDB.Bson;
-using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace WindowsFormsApp1
 {
@@ -23,6 +20,7 @@ namespace WindowsFormsApp1
                return "invalid_cpf";
             if (user.Password == null || user.Password.Equals(""))
                 return "invalid_password";
+            var result = validatePasswordStrenght(user.Password);
             if (user.Rg == null || user.Rg.Equals(""))
                 return "invalid_rg";
             if (user.Name == null || user.Name.Equals(""))
@@ -44,6 +42,32 @@ namespace WindowsFormsApp1
             
 
             return "success";
+        }
+
+        private String validatePasswordStrenght(string userPassword)
+        {
+            if (userPassword.Length < 7 && userPassword.Length > 11)
+            {
+                return "Tamanho Incorreto";
+            }
+
+            if (userPassword.Any(Char.IsWhiteSpace))
+            {
+                return "Senha não pode conter espaços em branco";
+            }
+
+            if (userPassword.Any(Char.IsLetterOrDigit))
+            {
+                return "Senha não pode conter caracteres especiais";
+            }
+            
+            var digits = userPassword.Count(Char.IsDigit);
+            var letters = userPassword.Count(Char.IsLetter);
+            if (letters < 3 && digits < 2)
+            {
+                return "Senha precisa conter no minimo 3 letras e no minimo 2 números";
+            }
+            return null;
         }
     }
 }

@@ -97,6 +97,11 @@
     <Compile Include="calculadoraCaloriasDiarias.Designer.cs">
       <DependentUpon>calculadoraCaloriasDiarias.cs</DependentUpon>
     </Compile>
+    <Compile Include="collections\Product.cs" />
+    <Compile Include="collections\User.cs" />
+    <Compile Include="collections\UserHistory.cs" />
+    <Compile Include="exceptions\WrongcredentialsException.cs" />
+    <Compile Include="usecases\BloqueioUseCase.cs" />
     <Compile Include="usecases\CadastrarProduto.cs" />
     <Compile Include="usecases\CadastrarUsuario.cs" />
     <Compile Include="Calculadora.cs" />
@@ -119,9 +124,6 @@
     <Compile Include="ExcluirUser.Designer.cs">
       <DependentUpon>ExcluirUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="usecases\collections\Product.cs" />
-    <Compile Include="usecases\collections\User.cs" />
-    <Compile Include="usecases\collections\UserHistory.cs" />
     <Compile Include="usecases\ExcluirUserUseCase.cs" />
     <Compile Include="usecases\DesbloqueioUseCase.cs" />
     <Compile Include="usecases\LoginUsecase.cs" />
