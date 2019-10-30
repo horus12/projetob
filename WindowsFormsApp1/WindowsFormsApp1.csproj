@@ -172,6 +172,9 @@
     <EmbeddedResource Include="CadastroDeProduto.resx">
       <DependentUpon>CadastroDeProduto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="calculadoraCaloriasDiarias.resx">
+      <DependentUpon>calculadoraCaloriasDiarias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CalculadoraImc.resx">
       <DependentUpon>CalculadoraImc.cs</DependentUpon>
     </EmbeddedResource>
