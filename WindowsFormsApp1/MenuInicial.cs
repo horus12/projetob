@@ -73,5 +73,11 @@ namespace WindowsFormsApp1
             var cadastrarProduto = new CadastroDeProduto();
             cadastrarProduto.ShowDialog();
         }
+
+        private void exclusaoDeAlimentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var excluirProduto =  new ExcluirProduto();
+            excluirProduto.ShowDialog();
+        }
     }
 }

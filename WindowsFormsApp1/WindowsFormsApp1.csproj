@@ -101,10 +101,15 @@
     <Compile Include="collections\User.cs" />
     <Compile Include="collections\UserHistory.cs" />
     <Compile Include="exceptions\WrongcredentialsException.cs" />
+    <Compile Include="ExcluirProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirProduto.Designer.cs">
+      <DependentUpon>ExcluirProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="usecases\BloqueioUseCase.cs" />
     <Compile Include="usecases\CadastrarProduto.cs" />
     <Compile Include="usecases\CadastrarUsuario.cs" />
-    <Compile Include="Calculadora.cs" />
     <Compile Include="CalculadoraImc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,8 +129,10 @@
     <Compile Include="ExcluirUser.Designer.cs">
       <DependentUpon>ExcluirUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="usecases\Calculadora.cs" />
     <Compile Include="usecases\ExcluirUserUseCase.cs" />
     <Compile Include="usecases\DesbloqueioUseCase.cs" />
+    <Compile Include="usecases\ExcuirProduto.cs" />
     <Compile Include="usecases\LoginUsecase.cs" />
     <Compile Include="usecases\StatusEnum.cs" />
     <Compile Include="UserStatus.cs" />
@@ -183,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Desbloqueio.resx">
       <DependentUpon>Desbloqueio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirProduto.resx">
+      <DependentUpon>ExcluirProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExcluirUser.resx">
       <DependentUpon>ExcluirUser.cs</DependentUpon>

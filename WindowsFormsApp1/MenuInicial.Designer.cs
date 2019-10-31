@@ -157,6 +157,8 @@
             this.exclusaoDeAlimentoToolStripMenuItem.Name = "exclusaoDeAlimentoToolStripMenuItem";
             this.exclusaoDeAlimentoToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.exclusaoDeAlimentoToolStripMenuItem.Text = "exclusao de alimento";
+            this.exclusaoDeAlimentoToolStripMenuItem.Click +=
+                new System.EventHandler(this.exclusaoDeAlimentoToolStripMenuItem_Click);
             // 
             // alteracaoDeAlimentoToolStripMenuItem
             // 
