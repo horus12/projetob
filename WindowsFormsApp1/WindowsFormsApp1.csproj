@@ -91,11 +91,11 @@
     <Compile Include="CadastroDeProduto.Designer.cs">
       <DependentUpon>CadastroDeProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="calculadoraCaloriasDiarias.cs">
+    <Compile Include="CalculadoraCaloriasDiarias.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="calculadoraCaloriasDiarias.Designer.cs">
-      <DependentUpon>calculadoraCaloriasDiarias.cs</DependentUpon>
+      <DependentUpon>CalculadoraCaloriasDiarias.cs</DependentUpon>
     </Compile>
     <Compile Include="collections\Product.cs" />
     <Compile Include="collections\User.cs" />
@@ -180,7 +180,7 @@
       <DependentUpon>CadastroDeProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="calculadoraCaloriasDiarias.resx">
-      <DependentUpon>calculadoraCaloriasDiarias.cs</DependentUpon>
+      <DependentUpon>CalculadoraCaloriasDiarias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CalculadoraImc.resx">
       <DependentUpon>CalculadoraImc.cs</DependentUpon>

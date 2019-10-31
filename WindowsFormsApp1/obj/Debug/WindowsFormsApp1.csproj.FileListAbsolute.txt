@@ -1194,6 +1194,7 @@ C:\workspace\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\workspace\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\workspace\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CadastroDeProduto.resources
 C:\Users\15610967\RiderProjects\projetob\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CadastroDeProduto.resources
+<<<<<<< Updated upstream
 C:\Users\15273758.LAB-INF\RiderProjects\projetob\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
 C:\Users\15273758.LAB-INF\RiderProjects\projetob\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 C:\Users\15273758.LAB-INF\RiderProjects\projetob\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
@@ -1330,3 +1331,6 @@ C:\Users\15273758.LAB-INF\RiderProjects\projetob\WindowsFormsApp1\obj\Debug\Wind
 C:\Users\15273758.LAB-INF\RiderProjects\projetob\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
 C:\Users\15273758.LAB-INF\RiderProjects\projetob\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\15273758.LAB-INF\RiderProjects\projetob\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+=======
+C:\Users\15610967\RiderProjects\projetob\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.calculadoraCaloriasDiarias.resources
+>>>>>>> Stashed changes
