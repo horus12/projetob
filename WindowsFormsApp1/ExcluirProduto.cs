@@ -15,19 +15,8 @@ namespace WindowsFormsApp1
         public ExcluirProduto()
         {
             InitializeComponent();
-            Mongo mongo = new Mongo();
-            var database = mongo.getserver();
-            var collection = database.GetCollection<Product>("product"); 
-            resultes = collection.Find(_ => true).ToList();
-            if (resultes.Count == 0)
-            {
-                MessageBox.Show("No Products");
-                this.Dispose();
-            }
+            updateCombo();
 
-            List<String> list = resultes.Select(result => result.Name).ToList();
-            comboBox1.Items.AddRange(list.ToArray<object>());
-            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -66,14 +55,38 @@ namespace WindowsFormsApp1
                 label4.Text = "";
                 label5.Text = "";
                 comboBox1.SelectedIndex = -1;
+                updateCombo();
 
             }else
             {
                 MessageBox.Show("error");
+                label3.Text = "";
+                label4.Text = "";
+                label5.Text = "";
+                comboBox1.SelectedIndex = -1;
             }
 
         }
 
-       
+        private void updateCombo()
+        {
+            Mongo mongo = new Mongo();
+            var database = mongo.getserver();
+            var collection = database.GetCollection<Product>("product"); 
+            resultes = collection.Find(_ => true).ToList();
+            comboBox1.Items.Clear();
+            if (resultes.Count == 0)
+            {
+                
+                MessageBox.Show("No Products");
+                
+            }
+
+            List<String> list = resultes.Select(result => result.Name).ToList();
+            comboBox1.Items.AddRange(list.ToArray<object>());
+            
+        }
+
+
     }
 }
