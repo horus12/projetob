@@ -52,6 +52,7 @@ namespace WindowsFormsApp1
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(12, 153);
             this.comboBox1.Name = "comboBox1";
@@ -83,7 +84,6 @@ namespace WindowsFormsApp1
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(198, 22);
             this.label3.TabIndex = 4;
-            this.label3.Text = "";
             // 
             // label4
             // 
@@ -91,7 +91,6 @@ namespace WindowsFormsApp1
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(198, 22);
             this.label4.TabIndex = 5;
-            this.label4.Text = "";
             // 
             // label5
             // 
@@ -99,7 +98,6 @@ namespace WindowsFormsApp1
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(198, 22);
             this.label5.TabIndex = 6;
-            this.label5.Text = "";
             // 
             // ExcluirProduto
             // 

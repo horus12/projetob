@@ -80,5 +80,17 @@ namespace WindowsFormsApp1
             var excluirProduto =  new ExcluirProduto();
             excluirProduto.ShowDialog();
         }
+
+        private void alteracaoDeAlimentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var alterarProduto = new AlterarProduto();
+            alterarProduto.ShowDialog();
+        }
+
+        private void consultarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var consultarProduto = new ConsultarProdutos();
+            consultarProduto.ShowDialog();
+        }
     }
 }

@@ -114,6 +114,7 @@ namespace WindowsFormsApp1
             // 
             // tbTipo
             // 
+            this.tbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tbTipo.FormattingEnabled = true;
             this.tbTipo.Items.AddRange(new object[] {"unidade", "gramas", "mls"});
             this.tbTipo.Location = new System.Drawing.Point(188, 178);

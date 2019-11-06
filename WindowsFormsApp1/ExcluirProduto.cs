@@ -18,11 +18,7 @@ namespace WindowsFormsApp1
             updateCombo();
 
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
+        
 
         private void ExcluirProduto_Load(object sender, EventArgs e)
         {
@@ -51,11 +47,12 @@ namespace WindowsFormsApp1
             if (excluirProduto.Excluir(p))
             {
                 MessageBox.Show("success");
+                
+                comboBox1.SelectedIndex = -1;
+                updateCombo();
                 label3.Text = "";
                 label4.Text = "";
                 label5.Text = "";
-                comboBox1.SelectedIndex = -1;
-                updateCombo();
 
             }else
             {

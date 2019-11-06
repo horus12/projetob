@@ -165,6 +165,8 @@
             this.alteracaoDeAlimentoToolStripMenuItem.Name = "alteracaoDeAlimentoToolStripMenuItem";
             this.alteracaoDeAlimentoToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.alteracaoDeAlimentoToolStripMenuItem.Text = "alteracao de alimento";
+            this.alteracaoDeAlimentoToolStripMenuItem.Click +=
+                new System.EventHandler(this.alteracaoDeAlimentoToolStripMenuItem_Click);
             // 
             // calcularCaloriasConsumidasToolStripMenuItem
             // 
@@ -179,6 +181,8 @@
             this.consultarProdutoToolStripMenuItem.Name = "consultarProdutoToolStripMenuItem";
             this.consultarProdutoToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.consultarProdutoToolStripMenuItem.Text = "Consultar Produto";
+            this.consultarProdutoToolStripMenuItem.Click +=
+                new System.EventHandler(this.consultarProdutoToolStripMenuItem_Click);
             // 
             // MenuInicial
             // 
