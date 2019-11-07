@@ -40,6 +40,9 @@ namespace WindowsFormsApp1
             this.button1 = new System.Windows.Forms.Button();
             this.labelTotal = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -53,6 +56,7 @@ namespace WindowsFormsApp1
             // 
             // comboBoxCategory
             // 
+            this.comboBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCategory.FormattingEnabled = true;
             this.comboBoxCategory.Location = new System.Drawing.Point(22, 104);
             this.comboBoxCategory.Name = "comboBoxCategory";
@@ -87,6 +91,7 @@ namespace WindowsFormsApp1
             // 
             // comboBoxAlimentos
             // 
+            this.comboBoxAlimentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAlimentos.FormattingEnabled = true;
             this.comboBoxAlimentos.Location = new System.Drawing.Point(22, 156);
             this.comboBoxAlimentos.Name = "comboBoxAlimentos";
@@ -105,11 +110,12 @@ namespace WindowsFormsApp1
             // 
             // labelTotal
             // 
-            this.labelTotal.Location = new System.Drawing.Point(22, 230);
+            this.labelTotal.Location = new System.Drawing.Point(189, 254);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(213, 23);
+            this.labelTotal.Size = new System.Drawing.Size(415, 23);
             this.labelTotal.TabIndex = 7;
             this.labelTotal.Text = "Calorias Ingeridas: 0";
+            this.labelTotal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // listBox1
             // 
@@ -120,11 +126,38 @@ namespace WindowsFormsApp1
             this.listBox1.Size = new System.Drawing.Size(415, 199);
             this.listBox1.TabIndex = 8;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(189, 305);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(415, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Enviar lista de alimentos por email";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(238, 276);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(366, 23);
+            this.textBox1.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(189, 277);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 23);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Email:";
+            // 
             // calculadoraCaloriasDiarias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.button1);
@@ -139,6 +172,7 @@ namespace WindowsFormsApp1
             this.Text = "calculadoraCaloriasDiarias";
             this.Load += new System.EventHandler(this.calculadoraCaloriasDiarias_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
         #endregion
@@ -152,5 +186,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

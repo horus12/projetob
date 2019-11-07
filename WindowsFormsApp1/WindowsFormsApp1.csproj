@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=9.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005">
+      <HintPath>..\packages\AutoMapper.9.0.0\lib\net461\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Crc32C.NET, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Crc32C.NET.1.0.5.0\lib\net20\Crc32C.NET.dll</HintPath>
     </Reference>
@@ -112,6 +116,8 @@
     <Compile Include="ConsultarProdutos.Designer.cs">
       <DependentUpon>ConsultarProdutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\ProductView.cs" />
+    <Compile Include="exceptions\NoProductException.cs" />
     <Compile Include="exceptions\WrongcredentialsException.cs" />
     <Compile Include="ExcluirProduto.cs">
       <SubType>Form</SubType>
@@ -247,6 +253,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="mapper" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
