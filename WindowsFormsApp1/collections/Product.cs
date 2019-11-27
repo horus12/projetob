@@ -15,6 +15,9 @@ namespace WindowsFormsApp1.usecases.collections
         public string Tipo { get; set; }
         public string Classe { get; set; }
         public float Calorias { get; set; }
-        
+        public float CaloriasTotais { get; set; }
+
+        public float Qtd { get; set; }
+
     }
 }

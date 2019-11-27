@@ -25,7 +25,8 @@ namespace WindowsFormsApp1
             collection.ReplaceOne(userFilter, user);
 
             var emailSender = new Email();
-            emailSender.email_send(email,user.Name);
+            var body = "Olá " + user.Name + " seu usuário foi desbloqueado com sucesso!";
+            emailSender.email_send(email,"Desbloqueio","",body);
         }
     }
 }

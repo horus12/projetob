@@ -63,7 +63,13 @@ namespace WindowsFormsApp1
                 throw new Exception("Usuario inexistente ");
 
             Product product = results.First();
-            caloriasIngeridas += product.Calorias;
+            var multiplicador = 1.0;
+            if (float.Parse(textBox2.Text) > 0)
+                multiplicador = float.Parse(textBox2.Text);
+                
+            product.CaloriasTotais = (float) (product.Calorias * multiplicador);
+            product.Qtd = (float) multiplicador;
+            caloriasIngeridas += product.CaloriasTotais;
             labelTotal.Text = "Calorias Ingeridas: " + caloriasIngeridas;
 
             var config = new MapperConfiguration(cfg => {
@@ -75,22 +81,52 @@ namespace WindowsFormsApp1
             listBox1.Refresh();
         }
         
-//        private void button2_Click_1(object sender, EventArgs e)
-//        {
-//            StreamWriter myOutputStream = new StreamWriter(@"C:\Users\15610967\Documents\Myfile.csv");
-//
-//            foreach (var item in listBox1.Items)
-//            {
-//                myOutputStream.WriteLine(item.ToString());
-//            }
-//            myOutputStream.Close();
-//            Email email = new Email();
-//
-//            var myFile = new StreamReader(@"C:\Users\15610967\Documents\Myfile.csv");
-//            var cryptoStream = new CryptoStream(myFile, new FromBase64Transform(), CryptoStreamMode.Write);
-//            var memoryStream = new MemoryStream();
-//            memoryStream.CopyTo(myFile);
-//            email.email_send();
-//        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            StreamWriter myOutputStream = new StreamWriter(@"C:\download\Myfile.csv");
+
+            foreach (var item in listBox1.Items)
+            {
+                myOutputStream.WriteLine(item.ToString());
+            }
+            myOutputStream.WriteLine(labelTotal.Text);
+            myOutputStream.Close();
+            myOutputStream.Dispose();
+            Email email = new Email();
+
+            var file = @"C:\download\Myfile.csv";
+            var body = "Segue anexado suas calorias consumidas no dia ";
+            try
+            {
+                email.email_send(textBox1.Text, "Email de Calorias Diarias", file, body);
+            }
+            catch (Exception expec)
+            {
+                MessageBox.Show("Erro ao enviar o email, Digite novamente o email");
+                textBox1.Text = "";
+            }
+            
+            MessageBox.Show("Email enviado com sucesso");
+            textBox1.Text = "";
+            listBox1.Items.Clear();
+            
+
+
+        }
+
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // If you want, you can allow decimal (float) numbers
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
