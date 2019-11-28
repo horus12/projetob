@@ -64,8 +64,15 @@ namespace WindowsFormsApp1
 
         private void calcularCaloriasConsumidasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var calculadoraCaloriasDiarias = new calculadoraCaloriasDiarias();
-            calculadoraCaloriasDiarias.ShowDialog();
+            try
+            {
+                var calculadoraCaloriasDiarias = new calculadoraCaloriasDiarias();
+                calculadoraCaloriasDiarias.ShowDialog();
+            }
+            catch (Exception eNTRY)
+            {
+                MessageBox.Show("Não existem produtos cadastrados");
+            }
         }
 
         private void cadastroDeAlimentosToolStripMenuItem_Click(object sender, EventArgs e)

@@ -83,7 +83,7 @@ namespace WindowsFormsApp1
         
         private void button2_Click(object sender, EventArgs e)
         {
-            StreamWriter myOutputStream = new StreamWriter(@"C:\download\Myfile.csv");
+            StreamWriter myOutputStream = new StreamWriter(@"C:\Intel\caloriasDiarias.csv");
 
             foreach (var item in listBox1.Items)
             {
@@ -94,7 +94,7 @@ namespace WindowsFormsApp1
             myOutputStream.Dispose();
             Email email = new Email();
 
-            var file = @"C:\download\Myfile.csv";
+            var file = @"C:\Intel\caloriasDiarias.csv";
             var body = "Segue anexado suas calorias consumidas no dia ";
             try
             {

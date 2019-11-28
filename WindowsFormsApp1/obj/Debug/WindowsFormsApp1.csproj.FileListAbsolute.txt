@@ -416,3 +416,8 @@ C:\Users\15610967\RiderProjects\projetob\WindowsFormsApp1\bin\Debug\AutoMapper.x
 C:\workspace\WindowsFormsApp1\bin\Debug\AutoMapper.dll
 C:\workspace\WindowsFormsApp1\bin\Debug\AutoMapper.pdb
 C:\workspace\WindowsFormsApp1\bin\Debug\AutoMapper.xml
+C:\Users\15273758\RiderProjects\projetob\WindowsFormsApp1\bin\Debug\AutoMapper.dll
+C:\Users\15273758\RiderProjects\projetob\WindowsFormsApp1\bin\Debug\AutoMapper.pdb
+C:\Users\15273758\RiderProjects\projetob\WindowsFormsApp1\bin\Debug\AutoMapper.xml
+C:\Users\15273758\RiderProjects\projetob\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AlterarProduto.resources
+C:\Users\15273758\RiderProjects\projetob\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ConsultarProdutos.resources
