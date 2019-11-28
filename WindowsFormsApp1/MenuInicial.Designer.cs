@@ -67,7 +67,7 @@
             // 
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.menuToolStripMenuItem.Text = "menu";
+            this.menuToolStripMenuItem.Text = "Menu";
             // 
             // administraçãoToolStripMenuItem
             // 
@@ -119,7 +119,7 @@
             // alterarSenhaToolStripMenuItem
             // 
             this.alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
-            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.alterarSenhaToolStripMenuItem.Text = "Alterar senha";
             this.alterarSenhaToolStripMenuItem.Click +=
                 new System.EventHandler(this.alterarSenhaToolStripMenuItem_Click);
@@ -127,7 +127,7 @@
             // excluirContaToolStripMenuItem
             // 
             this.excluirContaToolStripMenuItem.Name = "excluirContaToolStripMenuItem";
-            this.excluirContaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.excluirContaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.excluirContaToolStripMenuItem.Text = "Excluir conta";
             this.excluirContaToolStripMenuItem.Click +=
                 new System.EventHandler(this.excluirContaToolStripMenuItem_Click);
@@ -147,7 +147,7 @@
             // cadastroDeAlimentosToolStripMenuItem
             // 
             this.cadastroDeAlimentosToolStripMenuItem.Name = "cadastroDeAlimentosToolStripMenuItem";
-            this.cadastroDeAlimentosToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.cadastroDeAlimentosToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.cadastroDeAlimentosToolStripMenuItem.Text = "Cadastro de alimentos";
             this.cadastroDeAlimentosToolStripMenuItem.Click +=
                 new System.EventHandler(this.cadastroDeAlimentosToolStripMenuItem_Click);
@@ -155,31 +155,31 @@
             // exclusaoDeAlimentoToolStripMenuItem
             // 
             this.exclusaoDeAlimentoToolStripMenuItem.Name = "exclusaoDeAlimentoToolStripMenuItem";
-            this.exclusaoDeAlimentoToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.exclusaoDeAlimentoToolStripMenuItem.Text = "exclusao de alimento";
+            this.exclusaoDeAlimentoToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.exclusaoDeAlimentoToolStripMenuItem.Text = "Exclusao de alimento";
             this.exclusaoDeAlimentoToolStripMenuItem.Click +=
                 new System.EventHandler(this.exclusaoDeAlimentoToolStripMenuItem_Click);
             // 
             // alteracaoDeAlimentoToolStripMenuItem
             // 
             this.alteracaoDeAlimentoToolStripMenuItem.Name = "alteracaoDeAlimentoToolStripMenuItem";
-            this.alteracaoDeAlimentoToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.alteracaoDeAlimentoToolStripMenuItem.Text = "alteracao de alimento";
+            this.alteracaoDeAlimentoToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.alteracaoDeAlimentoToolStripMenuItem.Text = "Alteracao de alimento";
             this.alteracaoDeAlimentoToolStripMenuItem.Click +=
                 new System.EventHandler(this.alteracaoDeAlimentoToolStripMenuItem_Click);
             // 
             // calcularCaloriasConsumidasToolStripMenuItem
             // 
             this.calcularCaloriasConsumidasToolStripMenuItem.Name = "calcularCaloriasConsumidasToolStripMenuItem";
-            this.calcularCaloriasConsumidasToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.calcularCaloriasConsumidasToolStripMenuItem.Text = "calcular calorias consumidas";
+            this.calcularCaloriasConsumidasToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.calcularCaloriasConsumidasToolStripMenuItem.Text = "Calcular calorias consumidas";
             this.calcularCaloriasConsumidasToolStripMenuItem.Click +=
                 new System.EventHandler(this.calcularCaloriasConsumidasToolStripMenuItem_Click);
             // 
             // consultarProdutoToolStripMenuItem
             // 
             this.consultarProdutoToolStripMenuItem.Name = "consultarProdutoToolStripMenuItem";
-            this.consultarProdutoToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.consultarProdutoToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.consultarProdutoToolStripMenuItem.Text = "Consultar Produto";
             this.consultarProdutoToolStripMenuItem.Click +=
                 new System.EventHandler(this.consultarProdutoToolStripMenuItem_Click);
