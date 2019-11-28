@@ -116,6 +116,7 @@
     <Compile Include="ConsultarProdutos.Designer.cs">
       <DependentUpon>ConsultarProdutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="exceptions\EmptyTextBoxException.cs" />
     <Compile Include="view\ProductView.cs" />
     <Compile Include="exceptions\NoProductException.cs" />
     <Compile Include="exceptions\WrongcredentialsException.cs" />
